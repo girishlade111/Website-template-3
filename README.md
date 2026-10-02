@@ -1,79 +1,69 @@
 # Website Template 3
 
-Responsive multi-page HTML/CSS website template #3 in the LadeStack template series. Built with Bootstrap, custom CSS, and FontAwesome icon fonts — zero build step required.
+Responsive multi-page HTML/CSS website template — part of the LadeStack website-template series. Pure static site built with Bootstrap 3, custom CSS, and FontAwesome icon webfonts — zero build step, just open and serve.
 
 ## ✨ Features
 
 - 5 ready-to-customize pages: Home, About Us, Services, Our Gallery, Contact Us
-- Bootstrap-grid layout for responsive behaviour on mobile, tablet, and desktop
-- Modular CSS split: `default.css` (theme) + `custom.css` (overrides) + `combined.min.css` (production)
-- Icon set: full FontAwesome webfont (`.eot`, `.svg`, `.ttf`, `.woff`) + `.otf`
-- `bootstrap.min.js` for off-the-shelf interactive components
+- Responsive Bootstrap 3 grid layout for mobile, tablet, and desktop
+- Modular CSS: `css/default.css` (theme) + `css/custom.css` (overrides)
+- Full FontAwesome icon webfont bundled in `fonts/` (eot, svg, ttf, woff)
+- `js/bootstrap.min.js` for off-the-shelf interactive components
 - SEO-friendly `sitemap.xml` included
-- Drop-in `http-server` setup — no build pipeline needed
-
-Classic five-page layout suitable for small businesses, agencies, and freelancers.
+- No build pipeline, no dependencies, no backend
 
 ## 📄 Pages included
 
-- **Home**
-- **About Us**
-- **Services**
-- **Our Gallery**
-- **Contact Us**
+- `index.html` / `home.html` — Home
+- `about-us.html` — About Us
+- `services.html` — Services
+- `our-gallery.html` — Our Gallery
+- `contact-us.html` — Contact Us
 
 ## 🛠️ Tech stack
 
 - HTML5
-- CSS3 (`default.css`, `custom.css`, `combined.min.css`)
+- CSS3 (`default.css`, `custom.css`)
 - Bootstrap 3 grid + `bootstrap.min.js`
-- FontAwesome icon webfont
-- Node.js `http-server` for local serving
+- FontAwesome icon webfonts
 
-## 🚀 Getting started
+## 🚀 Quick start
 
 ```bash
-# Option 1 — http-server (matches the repo's package.json)
-npm install
-npm start    # serves on http://localhost:8080
-
-# Option 2 — any static server
-python -m http.server 8080
+# any static server works
+python3 -m http.server 8080
 ```
 
-Then open <http://localhost:8080/home.html> (or `index.html` once you set it as the entry).
+Then open <http://localhost:8080/> in a browser. You can also deploy it as-is to GitHub Pages, Cloudflare Pages, Netlify, or any static host.
 
 ## 📁 Project structure
 
 ```
 .
+├── index.html            # entry page (copy of home.html)
 ├── home.html
-├── about-us.html / about.html
-├── contact-us.html / contact.html
+├── about-us.html
 ├── services.html
-├── our-gallery.html / gallery.html
-├── css/
-│   ├── default.css
-│   ├── custom.css
-│   └── combined.min.css
-├── js/
-│   └── bootstrap.min.js
-├── fonts/                # FontAwesome webfont + .otf
-├── sitemap.xml
-└── package.json
+├── our-gallery.html
+├── contact-us.html
+├── css/                  # default.css, custom.css
+├── js/                   # bootstrap.min.js
+├── fonts/                # FontAwesome webfonts
+└── sitemap.xml
 ```
 
 ## 🎨 Customization
 
-1. Replace placeholder text inside each HTML file directly.
-2. Tweak theme colours in `css/default.css` — variables are at the top.
-3. Add per-section overrides in `css/custom.css`.
-4. Drop new icons in by referencing them from `fonts/FontAwesome.otf`.
+1. Edit placeholder text and sections directly in each HTML file.
+2. Tweak theme colours in `css/default.css`; add per-section overrides in `css/custom.css`.
+3. Point the contact form at your own backend or form service (currently static markup).
 
-## 📜 License
+## 🌐 Deployment
 
-Released for personal and commercial use. Attribution appreciated but not required.
+Static site — enable GitHub Pages (branch `master`, path `/`) or drag the folder onto any static host.
 
 ---
 
-> Part of the **Website-template** series — explore templates 1–7 for layout alternatives.
+Built by **Girish Lade** — [ladestack.in](https://ladestack.in)
+
+> Part of the **Website-template** series — see the other Website-template repos for layout alternatives.
